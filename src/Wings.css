@@ -1,0 +1,97 @@
+.wings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.butterfly {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.wing {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  background-color: #00aaff;
+  border-radius: 50%;
+  transform-origin: bottom center;
+  z-index: 1;
+}
+
+.wing-left {
+  left: 0;
+  top: 0;
+  background: linear-gradient(to bottom right, #00aaff, #0099cc);
+  transform: rotate(-30deg);
+}
+
+.wing-right {
+  right: 0;
+  top: 0;
+  background: linear-gradient(to bottom left, #00aaff, #0099cc);
+  transform: rotate(30deg);
+}
+
+.body {
+  position: absolute;
+  top: 30px;
+  left: 45px;
+  width: 10px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.butterfly::before,
+.butterfly::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.butterfly::before {
+  top: 10px;
+  left: 45px;
+}
+
+.butterfly::after {
+  top: 50px;
+  left: 45px;
+}
+
+.butterfly:hover .wing-left,
+.butterfly:hover .wing-right {
+  animation: flutter 0.2s ease-in-out infinite alternate;
+}
+
+@keyframes flutter {
+  0% {
+    transform: rotate(-30deg) scale(1);
+  }
+  100% {
+    transform: rotate(-25deg) scale(1.05);
+  }
+}
+
+.butterfly:hover .wing-left {
+  animation: flutter 0.2s ease-in-out infinite alternate;
+}
+
+.butterfly:hover .wing-right {
+  animation: flutter 0.2s ease-in-out infinite alternate;
+  transform: rotate(25deg);
+}
+
+.butterfly-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
