@@ -40,7 +40,7 @@ function App() {
         "Let's talk Vaishnavi, neetho chaala cheppali.",
         "Just give it a chance.",
         "Am I too late to express myself? I could be.",
-        "I will explain you why it got this late.",
+        "(And trust me, I did not want to leave things hanging.)",
         "But, my favorite character on a show once said:"
       ],
       video: noraVideo
