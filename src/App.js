@@ -16,7 +16,7 @@ function App() {
     },
     {
       text: [
-        "I will be honest with you. I have been waiting for the right time to talk to you.",
+        "I will be honest with you. I know I left things hanging the last time we spoke. Trust me, I did not want to.","I have been waiting for the right time to talk to you.",
         "I don’t know if there ever will be a right time.",
         "So, here I go."
       ],
@@ -39,7 +39,7 @@ function App() {
         "If you've ever felt the way I do,",
         "Let's talk Vaishnavi, neetho chaala cheppali.",
         "Just give it a chance.",
-        "Am I too late to express myself? I could be. (Trust me, there are solid reasons.)",
+        "Am I too late to express myself? I could be.",
         "But, my favorite character on a show once said:"
       ],
       video: noraVideo
