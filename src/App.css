@@ -9,7 +9,7 @@ body {
   height: 100vh;
   background: url('./butterfly.jpeg') no-repeat center center fixed;
   background-size: cover;
-  overflow: hidden; /* Prevents any unintended horizontal scrolling */
+  overflow: hidden;
 }
 
 .card {
@@ -38,11 +38,11 @@ body {
   opacity: 1;
 }
 
-.content-wrapper.fade-out {
+.content-wrapper.hidden {
   opacity: 0;
 }
 
-.content-wrapper.fade-in {
+.content-wrapper.visible {
   opacity: 1;
 }
 

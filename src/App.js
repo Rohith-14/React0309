@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import noraVideo from './Nora.mp4';
-//import waiting from './waitingSmall.jpeg' 
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,7 +11,7 @@ function App() {
       text: [
         "I once met a beautiful butterfly! 🦋",
       ],
-      firstSlide: true // Indicate that this is the first slide
+      firstSlide: true 
     },
     {
       text: [
@@ -23,7 +22,8 @@ function App() {
     },
     {
       text: [
-        "Do you remember the first time we both spoke to each other?", "It was in March, at my place.",
+        "Do you remember the first time we both spoke to each other?", 
+        "It was in March, at my place.",
         "Oka fluttering 🦋 laga vachav, introduce cheskunav, matladav, vellipoyav.",
         "I just couldn't stop smiling."
       ],
@@ -49,31 +49,24 @@ function App() {
         "But, my favorite character on a show once said:"
       ],
       video: noraVideo
-    }];
-   // {
-    //  text: [
-    //    "Waiting for your response like 🙈😂: "
-    //  ],
-    //  image: waiting
-   // }
-  //];
+    }
+  ];
 
   const nextSlide = () => {
     setTransitioning(true);
-  
-    document.querySelector('.content-wrapper').classList.add('fade-out');
-  
+    document.querySelector('.content-wrapper').classList.add('hidden');
+
     setTimeout(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-      document.querySelector('.content-wrapper').classList.remove('fade-out');
-      document.querySelector('.content-wrapper').classList.add('fade-in');
-  
+      document.querySelector('.content-wrapper').classList.remove('hidden');
+      document.querySelector('.content-wrapper').classList.add('visible');
+
       setTimeout(() => {
-        document.querySelector('.content-wrapper').classList.remove('fade-in');
-      }, 500); // Match this to the CSS transition duration
-  
+        document.querySelector('.content-wrapper').classList.remove('visible');
+      }, 500);
+
       setTransitioning(false);
-    }, 500); // Adjust timing to match CSS transition
+    }, 500); // Match this to the CSS transition duration
   };
 
   const resetSlides = () => {
@@ -82,7 +75,7 @@ function App() {
 
   return (
     <div className="card">
-      <div className={`content-wrapper ${transitioning ? 'slide' : ''}`}>
+      <div className={`content-wrapper ${transitioning ? 'hidden' : 'visible'}`}>
         <div className="content">
           {slides[currentSlide].text.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
@@ -92,9 +85,6 @@ function App() {
               <source src={slides[currentSlide].video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          )}
-          {slides[currentSlide].image && (
-            <img src={slides[currentSlide].image} alt="Waiting" className="content-image" />
           )}
         </div>
       </div>
