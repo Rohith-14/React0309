@@ -31,6 +31,7 @@ function App() {
     {
       text: [
         "I liked your presence around me. I liked it even when we were not talking. Just having you around felt good.",
+        "(Like a 🦋)",
         "We got to know each other a little with whatever moments we managed to have. But, I always wanted more.",
       ],
     },
@@ -38,9 +39,10 @@ function App() {
       text: [
         "If you've ever felt the way I do,",
         "Let's talk Vaishnavi, neetho chaala matladali.",
-        "Also, I know.. A lott happened since the laast time we spoke.",
+        "Also, I know.. A lott happened since the last time we spoke.",
         "Just give it a chance. I will be waiting for your reply.",
         "(And trust me, I did not intend to leave things hanging previously.)",
+        "There's one last slide."
       ],
     },
     {
