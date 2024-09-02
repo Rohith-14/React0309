@@ -14,16 +14,16 @@ function App() {
       ],
       firstSlide: true // Indicate that this is the first slide
     },
-    /*{
+    {
       text: [
-        "I will be honest with you. I know I left things hanging the last time we spoke. Trust me, I did not want to.","I have been waiting for the right time to talk to you.",
+        "Yes.. Obviously.. I have been meaning to tell you something.",
         "I don’t know if there ever will be a right time.",
         "So, here I go."
       ],
-    },*/
+    },
     {
       text: [
-        "Do you remember the first time we both actually spoke?", "It was in March, at my place.",
+        "Do you remember the first time we both spoke to each other?", "It was in March, at my place.",
         "Oka fluttering 🦋 laga vachav, introduce cheskunav, matladav, vellipoyav.",
         "I just couldn't stop smiling."
       ],
@@ -38,10 +38,15 @@ function App() {
       text: [
         "If you've ever felt the way I do,",
         "Let's talk Vaishnavi, neetho chaala matladali.",
-        "Just give it a chance. I will be waiting. Lmk.",
-        "(Trust me, I did not want to leave things hanging.)",
+        "I know a lot of things happened in the meanwhile.",
+        "Just give it a chance. I will be waiting for your reply.",
+        "(And trust me, I did not intend to leave things hanging previously.)",
+      ],
+    },
+    {
+      text: [
         "Am I too late to express myself? Idk.",
-        "My favorite character on a show once said:"
+        "But, my favorite character on a show once said:"
       ],
       video: noraVideo
     }];

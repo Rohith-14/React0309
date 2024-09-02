@@ -33,11 +33,22 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 10px;
+  opacity: 1;
 }
 
 .content-wrapper.slide {
   transform: translateX(100%);
   opacity: 0;
+}
+
+.content-wrapper.enter {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.content-wrapper.enter-active {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .content {
