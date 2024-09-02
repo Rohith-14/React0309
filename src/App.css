@@ -9,6 +9,7 @@ body {
   height: 100vh;
   background: url('./butterfly.jpeg') no-repeat center center fixed;
   background-size: cover;
+  overflow: hidden; /* Prevents any unintended horizontal scrolling */
 }
 
 .card {
@@ -23,6 +24,7 @@ body {
   position: relative;
   text-align: center;
   transition: all 0.5s ease;
+  overflow: hidden; /* Ensures that content doesn't overflow outside the card */
 }
 
 .content-wrapper {
@@ -33,11 +35,22 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 10px;
+  transform: translateX(0); /* Ensures the initial position is set correctly */
 }
 
 .content-wrapper.slide {
-  transform: translateX(100%);
+  transform: translateX(100%); /* Moves content to the right, while background remains fixed */
   opacity: 0;
+}
+
+.content-wrapper.enter {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.content-wrapper.enter-active {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .content {
