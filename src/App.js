@@ -32,7 +32,7 @@ function App() {
       text: [
         "I liked your presence around me. I liked it even when we were not talking. Just having you around felt good.",
         "(Like a 🦋)",
-        "We got to know each other a little with whatever moments we managed to have. But, I always wanted more.",
+        "We got to know each other a little with whatever moments we managed to have. But, I always wanted to know you more.",
       ],
     },
     {
