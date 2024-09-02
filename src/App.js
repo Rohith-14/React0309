@@ -38,7 +38,6 @@ function App() {
       text: [
         "If you've ever felt the way I do,",
         "Let's talk Vaishnavi, neetho chaala matladali.",
-        "I know a lot of things happened in the meanwhile.",
         "Just give it a chance. I will be waiting for your reply.",
         "(And trust me, I did not intend to leave things hanging previously.)",
       ],
