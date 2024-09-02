@@ -60,14 +60,20 @@ function App() {
 
   const nextSlide = () => {
     setTransitioning(true);
+  
+    document.querySelector('.content-wrapper').classList.add('fade-out');
+  
     setTimeout(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+      document.querySelector('.content-wrapper').classList.remove('fade-out');
+      document.querySelector('.content-wrapper').classList.add('fade-in');
+  
+      setTimeout(() => {
+        document.querySelector('.content-wrapper').classList.remove('fade-in');
+      }, 500); // Match this to the CSS transition duration
+  
       setTransitioning(false);
     }, 500); // Adjust timing to match CSS transition
-  };
-
-  const resetSlides = () => {
-    setCurrentSlide(0);
   };
 
   return (
