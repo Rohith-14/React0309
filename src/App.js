@@ -76,6 +76,10 @@ function App() {
     }, 500); // Adjust timing to match CSS transition
   };
 
+  const resetSlides = () => {
+    setCurrentSlide(0);
+  };
+
   return (
     <div className="card">
       <div className={`content-wrapper ${transitioning ? 'slide' : ''}`}>
